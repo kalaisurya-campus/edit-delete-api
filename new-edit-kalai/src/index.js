@@ -4,13 +4,15 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Notesdata from "./components/usecontextapis/Notesdata";
+import "bootstrap/dist/css/bootstrap.min.css";
 
+import "bootstrap/dist/js/bootstrap.min.js";
 
 ReactDOM.render(
     <React.StrictMode>
         <Notesdata>
             <App />
-            </Notesdata>
+        </Notesdata>
     </React.StrictMode>,
     document.getElementById("root")
 );

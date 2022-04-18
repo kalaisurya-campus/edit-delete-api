@@ -19,7 +19,7 @@ function Notesdata(props) {
         GetApiDatas().then((res) => {
             SetLoding(true);
             setFirsts(res.data, "users data");
-            console.log(res.data);
+            // console.log(res.data);
         });
     };
 
@@ -27,7 +27,7 @@ function Notesdata(props) {
         GetApisDatasPosts().then((res) => {
             SetLoding1(true);
             setSecond(res.data);
-            console.log(res.data, "posts data");
+            // console.log(res.data, "posts data");
         });
     };
     return (
