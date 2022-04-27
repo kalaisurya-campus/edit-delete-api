@@ -41,10 +41,28 @@ function Image(props) {
                             width: "100px",
                             height: "100px",
                             borderRadius: "50%",
-                            border: "2px solid red",
+                            border: "4px solid red",
+                            objectFit: "cover",
+                            marginTop: "10px",
+                            marginRight: "10px",
+                            marginLeft: "10px",
                         }}
                     />
-                    <button onClick={Removeimage}>Remove Images</button>
+                    <button
+                        onClick={Removeimage}
+                        style={{
+                            border: "none",
+                            outline: "none",
+                            backgroundColor: "orange",
+                            padding: "15px",
+                            borderRadius: "20px",
+                            fontSize: "1.4rem",
+                            fontWeight: "500",
+                            cursor: "pointer",
+                        }}
+                    >
+                        Remove Images
+                    </button>
                 </div>
             )}
         </div>
