@@ -6,6 +6,7 @@ import Todolist from "./components/todolist/Todolist";
 import Formsdata from "./components/formsdata/Formsdata";
 import Javascript from "./components/javascriptimportant/Javascript";
 import Commondatas from "./components/switchstatementsin/Commondatas";
+import PachiCommonDeploy from "./components/switchpachiyappandata/PachiCommonDeploy";
 
 function App() {
     return (
@@ -17,7 +18,8 @@ function App() {
                     <Route path="/todo" component={Todolist} />
                     <Route path="/login" component={Formsdata} />
                     <Route path="/javascripts" component={Javascript} />
-                    <Route path="/common" component={Commondatas}/>
+                    <Route path="/common" component={Commondatas} />
+                    <Route path="/commonpachi" component={PachiCommonDeploy} />
                 </Switch>
             </BrowserRouter>
         </div>
