@@ -8,6 +8,8 @@ import Javascript from "./components/javascriptimportant/Javascript";
 import Commondatas from "./components/switchstatementsin/Commondatas";
 import PachiCommonDeploy from "./components/switchpachiyappandata/PachiCommonDeploy";
 import Dummydatas from "./components/datagets/Dummydatas";
+import NameData from "./components/usecontextapis/NameData";
+import NewUploadImages from "./components/newimageuploadpackage/NewUploadImages";
 
 function App() {
     return (
@@ -22,6 +24,11 @@ function App() {
                     <Route path="/common" component={Commondatas} />
                     <Route path="/commonpachi" component={PachiCommonDeploy} />
                     <Route path="/anothers" component={Dummydatas} />
+                    {/* another login page  start */}
+
+                    <Route path="/logins" component={NameData} />
+                    {/* {anoether login page end page } */}
+                    <Route path="/newimages" component={NewUploadImages}/>
                 </Switch>
             </BrowserRouter>
         </div>

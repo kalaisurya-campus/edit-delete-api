@@ -9,41 +9,37 @@ function NameData() {
 
     const Handlesubmits = (e) => {
         e.preventDefault();
+        console.log("emails", name, email, password);
+        UserNames(name, email, password);
     };
     return (
         <div>
-            <form>
-                <div class="mb-3">
-                    <label for="username" class="form-label">
-                        Email address
-                    </label>
-                    <input
-                        type="email"
-                        class="form-control"
-                        id="username"
-                        aria-describedby="emailHelp"
-                    />
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">
-                        Email address
-                    </label>
-                    <input
-                        type="email"
-                        class="form-control"
-                        id="email"
-                        aria-describedby="emailHelp"
-                    />
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">
-                        Password
-                    </label>
-                    <input type="password" class="form-control" id="password" />
-                </div>
-                <button type="submit" class="btn btn-primary">
-                    Submit
-                </button>
+            <form onSubmit={Handlesubmits}>
+                <h1>Login </h1>
+                <hr />
+                <label htmlFor="name">name</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter name"
+                    onChange={(e) => SetName(e.target.value)}
+                />
+
+                <label htmlFor="user">email</label>
+                <input
+                    type="text"
+                    id="email"
+                    placeholder="Enter Email"
+                    onChange={(e) => SetEmail(e.target.value)}
+                />
+                <label htmlFor="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter Password"
+                    onChange={(e) => SetPassword(e.target.value)}
+                />
+                <button type="submit">Login</button>
             </form>
         </div>
     );

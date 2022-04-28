@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import { GetApiDatas, GetApisDatasPosts } from "./api/Get";
 import DataProviderapis from "./DataProvidersapi";
 
@@ -12,7 +13,7 @@ function Notesdata(props) {
     const [loading, SetLoding] = useState(false);
 
     const [loading1, SetLoding1] = useState(false);
-
+    const history = useHistory();
     useEffect(() => {
         ApiDataGet();
         ApiPostsData();
@@ -35,6 +36,24 @@ function Notesdata(props) {
     };
 
     const UserNames = (name, email, password) => {
+        var formData = new FormData();
+        formData.append("username", name);
+        formData.append("email", email);
+        formData.append("password", password);
+        localStorage.setItem(
+            "names users",
+            JSON.stringify([
+                {
+                    email,
+                    password,
+                    name,
+                },
+            ])
+        );
+        if (email === "kalai@gmail.com" && password === "1234") {
+            history.push("/todo");
+        }
+
         console.log("received", name, email, password);
     };
 

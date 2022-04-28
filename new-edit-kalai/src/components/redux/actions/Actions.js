@@ -68,16 +68,20 @@ export const fetchadata = () => async (dispatch, getState) => {
 
 // end function in main functions
 
-
-
 export const anotherfetchdata = () => async (dispatch, getState) => {
     dispatch({ type: USERS_ANOTHER_GET_DATA_REQUEST });
     try {
         const response = await axios.get(
             "https://jsonplaceholder.typicode.com/posts"
         );
-        dispatch({ type: USERS_ANOTHER_GET_DATA_SUCCESS, payload: response.data });
+        dispatch({
+            type: USERS_ANOTHER_GET_DATA_SUCCESS,
+            payload: response.data,
+        });
     } catch (error) {
-        dispatch({ type: USERS_ANOTHER_GET_DATA_ERROR, error: "no Data Found" });
+        dispatch({
+            type: USERS_ANOTHER_GET_DATA_ERROR,
+            error: "no Data Found",
+        });
     }
 };
