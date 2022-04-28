@@ -11,17 +11,15 @@ function Home(props) {
     console.log("datas providers", data);
     const history = useHistory();
     const dispatch = useDispatch();
-    const usetext = useSelector((state) => state.userDataTest);
+    const selects = useSelector((state) => state);
+    console.log("io", selects);
     useEffect(() => {
         if (!localStorage.getItem("auth")) {
             history.push("/login");
         }
-    }, [logout]);
-    useEffect(() => {
         dispatch(fetchadata());
-    }, []);
-
-    console.log("testx", usetext);
+    }, [logout]);
+    useEffect(() => {}, []);
 
     const handlesubmits = (e) => {
         e.preventDefault();
@@ -29,8 +27,19 @@ function Home(props) {
         SetLogout(true);
     };
 
-    console.log("dispatched kalaisurya", props.uerdhilip);
-
+    const renderPostData = () => {
+        if (selects.userDataTest.loading) {
+            return <h1>Loading....</h1>;
+        }
+        return selects.userDataTest.items.map((tyi, index) => {
+            return (
+                <React.Fragment key={index}>
+                    <p>{tyi.name}</p>
+                </React.Fragment>
+            );
+        });
+    };
+    
     return (
         <div>
             {/* {data.first.length === 0 && <div>No Data Found users....</div>} */}
@@ -110,14 +119,17 @@ function Home(props) {
 
             <div>
                 <h1>welocme too home page api get datas</h1>
-                {usetext.length === 0 && <div>No Data Found</div>}
+
+                {/* {usetext.length === 0 && <div>No Data Found</div>}
                 {usetext.map((its, index) => {
                     return (
                         <div key={index}>
                             <p>{its.name}</p>
                         </div>
                     );
-                })}
+                })} */}
+
+                {renderPostData()}
             </div>
         </div>
     );

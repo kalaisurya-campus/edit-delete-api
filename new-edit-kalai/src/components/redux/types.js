@@ -1,1 +1,19 @@
-export const USER_DATA_GET="user_get_data";
+// USER DATAS START
+
+export const USER_DATA_GET_REQUEST = "user_get_data";
+
+export const USER_DATA_GET_SUCCESS = "users_data_get_success";
+
+export const USER_DATA_GET_ERROR = "user_data_error_data";
+
+// END STATE IN STARTS
+
+// ANOTEHR DATAS START
+
+export const USERS_ANOTHER_GET_DATA_REQUEST = "USER_ANOTHER_DATA_POST";
+
+export const USERS_ANOTHER_GET_DATA_SUCCESS = "USER_ANOTHER_DATA_SUCCESS";
+
+export const USERS_ANOTHER_GET_DATA_ERROR = "USER_ANOTHER_DATA_ERROR";
+
+// END STATES ANOTEHR DATSA

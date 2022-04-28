@@ -7,6 +7,7 @@ import Formsdata from "./components/formsdata/Formsdata";
 import Javascript from "./components/javascriptimportant/Javascript";
 import Commondatas from "./components/switchstatementsin/Commondatas";
 import PachiCommonDeploy from "./components/switchpachiyappandata/PachiCommonDeploy";
+import Dummydatas from "./components/datagets/Dummydatas";
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
                     <Route path="/javascripts" component={Javascript} />
                     <Route path="/common" component={Commondatas} />
                     <Route path="/commonpachi" component={PachiCommonDeploy} />
+                    <Route path="/anothers" component={Dummydatas} />
                 </Switch>
             </BrowserRouter>
         </div>
