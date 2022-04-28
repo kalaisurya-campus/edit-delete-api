@@ -15,7 +15,7 @@ export default class extends Component {
             <div>
                 <Switch>
                     <Route exact path={`${url}/`} component={Firsts} />
-                    <Route  path={`${url}/second`} component={Seconds} />
+                    <Route path={`${url}/second`} component={Seconds} />
                     <Route path={`${url}/third`} component={Third} />
                 </Switch>
             </div>

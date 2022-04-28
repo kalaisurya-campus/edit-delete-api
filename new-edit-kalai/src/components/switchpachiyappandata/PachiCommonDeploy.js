@@ -19,7 +19,6 @@ export default class PachiCommonDeploy extends Component {
                     <Route path={`${url}/pachi2`} component={Pachi2} />
                     <Route path={`${url}/pachi3`} component={Pachi3} />
                     <Route path={`${url}/pachi4`} component={Pachi4} />
-                
                 </Switch>
             </div>
         );
