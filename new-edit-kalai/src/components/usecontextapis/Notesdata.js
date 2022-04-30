@@ -50,7 +50,7 @@ function Notesdata(props) {
                 },
             ])
         );
-        if (email === "kalai@gmail.com" && password === "1234") {
+        if (email !== "kalai@gmail.com" && password !== "1234") {
             history.push("/todo");
         }
 

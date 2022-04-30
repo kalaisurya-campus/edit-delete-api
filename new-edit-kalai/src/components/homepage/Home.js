@@ -7,12 +7,27 @@ import { withRouter } from "react-router-dom";
 import { fetchadata } from "../redux/actions/Actions";
 function Home(props) {
     const data = useContext(DataProviderapis);
+
+    const [nums, SetNums] = useState([]);
     const [logout, SetLogout] = useState(false);
     console.log("datas providers", data);
     const history = useHistory();
     const dispatch = useDispatch();
     const selects = useSelector((state) => state);
     console.log("io", selects);
+    let valuesdata = [100, 90, 89, 9000, 6777, 456, 478];
+    var lp = [];
+
+    // for (let i of valuesdata) {
+
+    //     lp.push(i);
+    // }
+    valuesdata.forEach((e) => {
+        if (e > 90) {
+            lp.push(e);
+        }
+    });
+
     useEffect(() => {
         if (!localStorage.getItem("auth")) {
             history.push("/login");
@@ -39,11 +54,19 @@ function Home(props) {
             );
         });
     };
+    console.log("numssss", nums);
 
     return (
         <div>
             {/* {data.first.length === 0 && <div>No Data Found users....</div>} */}
             {/* {data.second.length === 0 && <div>No Data Found Posts....</div>} */}
+            {lp.map((et) => {
+                return (
+                    <div>
+                        <p>{et}</p>
+                    </div>
+                );
+            })}
 
             <button
                 onClick={handlesubmits}

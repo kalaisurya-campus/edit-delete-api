@@ -10,6 +10,7 @@ import PachiCommonDeploy from "./components/switchpachiyappandata/PachiCommonDep
 import Dummydatas from "./components/datagets/Dummydatas";
 import NameData from "./components/usecontextapis/NameData";
 import NewUploadImages from "./components/newimageuploadpackage/NewUploadImages";
+import MainGoogles from "./components/googleandfacebookoauth/MainGoogles";
 
 function App() {
     return (
@@ -28,7 +29,8 @@ function App() {
 
                     <Route path="/logins" component={NameData} />
                     {/* {anoether login page end page } */}
-                    <Route path="/newimages" component={NewUploadImages}/>
+                    <Route path="/newimages" component={NewUploadImages} />
+                    <Route path="/google" component={MainGoogles} />
                 </Switch>
             </BrowserRouter>
         </div>
