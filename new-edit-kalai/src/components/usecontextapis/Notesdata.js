@@ -23,6 +23,7 @@ function Notesdata(props) {
         GetApiDatas().then((res) => {
             SetLoding(true);
             setFirsts(res.data, "users data");
+            
             // console.log(res.data);
         });
     };

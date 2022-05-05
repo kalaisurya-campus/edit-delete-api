@@ -22,7 +22,7 @@ export default Firsts;
 // import axios from "axios";
 
 // import { CustomerData } from "../../assets/CustomerData";
-// import "./style/ListCustomers.scss";
+// import "./style/ListCustomers.scss";z
 
 // let url;
 // class ListCustomers extends Component {
